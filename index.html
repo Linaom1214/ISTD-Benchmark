@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<link href="MCLC.css" rel="stylesheet" type="text/css" />
+
+<meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
+</head>
+
+<body onLoad=" ">
+	<div id="container" class="STYLE37">
+
+
+		<meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
+		</head>
+
+		<body onLoad=" ">
+			<div id="container" class="STYLE37">
+
+				<br>
+				<p class="styleTittle" align="center">IR-TransDet: Infrared Dim and Small Target Detection With
+					IR-Transformer</p><br>
+				<p align="center"><span class="STYLEAuthor">
+					</span>
+				</p>
+				<br>
+
+				<p class="styleAffiliation" align="center">
+					<br><br>
+				<table width="100%" border="0">
+					<tbody>
+						<tr>
+							<th scope="col"><img src="./Figs/Architecture.png" width="80%"></th>
+						</tr>
+					</tbody>
+				</table>
+				<br><br>
+
+
+
+
+				<p class="STYLESection" align="center">Abstract</p>
+				<hr
+					style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+				<div style="padding:20px 20px 20px 20px; font-size=20; color: #333; ">
+					<p style="padding:15px 15px 15px 15px; background-color:#EEE; font-size:16px; font-family:PmingLiu; line-height:23px;"
+						, align="justify">
+						The infrared small and dim target detection method is a core technology in military equipment
+						such as search and tracking and space-based early warning. Compared to general target detection
+						techniques, infrared targets are characterized by their small size and dim features, making them
+						more challenging. We propose a novel infrared small and dim target detection approach called
+						IR-TransDet. This approach combines the advantages of convolutional neural networks and
+						Transformers, enabling effective extraction of target features and global semantic information.
+						Firstly, we introduce EFEM, a module that uses group convolution and pointwise convolution to
+						effectively localize target features. Based on the image characteristics of small and dim
+						targets, we propose an improved Residual Sim ASPP. By incorporating self-attention mechanism, we
+						explore the correlation between targets and neighboring pixels as well as global images, and
+						design the IR-Transformer module. Finally, we release the ISTD-Benchmark as an open-source
+						benchmark for comparative evaluation of infrared small and dim target detection methods. We
+						conducted experiments on four open-source datasets, and the results demonstrate that IR-TransDet
+						achieves state-of-the-art performance in infrared small and dim target detection. Furthermore,
+						with its lightweight design, the average inference time of IR-TransDet on the 3090 is 2.4066
+						milliseconds, resulting in a frame rate of 776.9 FPS.
+					</p>
+				</div>
+				<br><br>
+
+
+				<p class="STYLESection" align="center">Results</p>
+				<hr
+					style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+				<br>
+				<table width="100%" border="0">
+					<tbody>
+						<tr>
+							<th scope="col"><img src="./Figs/compare.png" width="100%"></th>
+						</tr>
+					</tbody>
+				</table>
+				<br><br><br><br>
+
+				<p class="STYLESection" align="center">ROC Results</p>
+				<hr
+					style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+				<br>
+				<style>
+					img {
+					  max-width: 100%;
+					  height: auto;
+					}
+				  </style>
+				<table>
+					<tr>
+					  <td><img src="./Figs/IRSTD_roc.png" alt="Image 1"></td>
+					  <td><img src="./Figs/mdfa_roc.png" alt="Image 2"></td>
+					</tr>
+					<tr>
+					  <td><img src="./Figs/merged_roc.png" alt="Image 3"></td>
+					  <td><img src="./Figs/sirstaug_roc.png" alt="Image 4"></td>
+					</tr>
+				  </table>
+				  <br><br><br><br>
+
+
+				  <p class="STYLESection" align="center">Deploy Model With TensorRT</p>
+				  <hr
+					  style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+				  <br>
+				  <head>
+					<title>Device FPS</title>
+					<style>
+					  table {
+						width: 100%;
+						border-collapse: collapse;
+						font-family: Arial, sans-serif;
+						color: #333;
+					  }
+					  
+					  th, td {
+						padding: 10px;
+						text-align: center;
+						border-bottom: 1px solid #ddd;
+					  }
+					  
+					  th {
+						background-color: #f2f2f2;
+						font-weight: bold;
+					  }
+					  
+					  tr:hover {
+						background-color: #f9f9f9;
+					  }
+					</style>
+				  </head>
+				  <table>
+					<tr>
+					  <th>Device</th>
+					  <th>FPS</th>
+					</tr>
+					<tr>
+					  <td>RTX 3060</td>
+					  <td>415.5 [fp16]</td>
+					</tr>
+					<tr>
+					  <td>RTX 3090</td>
+					  <td>776.9 [fp16]</td>
+					</tr>
+				  </table>
+				  <p style="padding:15px 15px 15px 15px; background-color:#EEE; font-size:16px; font-family:PmingLiu; line-height:23px;"
+				  , align="justify">
+					TensorRT Version 8.5.3.1
+				  </p>
+				  <br><br><br><br>
+
+				</pre>
+			</div>
+		</body>
+
+		</html>
