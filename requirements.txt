@@ -1,0 +1,7 @@
+torch
+scipy
+scikit-learn
+tqdm
+numpy
+opencv-python
+matlabengine 
