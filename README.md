@@ -1,26 +1,63 @@
-# 弱小目标检测Benchmark工具
+# IRSTD-Benchmark
 
-这个仓库是一个弱小目标检测Benchmark工具，旨在提供一个集成了典型弱小目标检测算法和统一评价指标的平台。该工具可以帮助研究人员和开发者评估不同算法在弱小目标检测任务上的性能。
+[简体中文](./README-zh.md)
 
-## 特性
-- 提供了标准的弱小目标检测评价指标，用于客观评估算法性能，包括但不限于：
-  - 平均精确度（Average Precision）
-  - 精确度-召回（Precision-Recall）
-  - F1值
-- 简单易用的接口和示例代码，方便用户快速上手并集成自己的算法或进行评估实验。
+This repository is a benchmark tool for weak small target detection, aiming to provide a platform that integrates typical weak small target detection algorithms and unified evaluation metrics. This tool can help researchers and developers evaluate the performance of different algorithms on weak small target detection tasks.
 
-## 安装和使用
-
-以下是使用该工具的简单步骤：
+## Features
+- Provides standard evaluation metrics for weak small target detection to objectively evaluate algorithm performance, including but not limited to:
+  - Precision-Recall
+  - F1 score
+- Simple and easy-to-use interface and sample code for users to quickly get started and integrate their own algorithms or conduct evaluation experiments.
 
 
+| IRSTD1K                      | MDFA                          |
+|------------------------------|-------------------------------|
+| ![Image 1 Description](figs/IRSTD_roc.png) | ![Image 2 Description](figs/mdfa_roc.png) |
 
-## 贡献
+| Merged                        | SirstAUG                        |
+|-------------------------------|---------------------------------|
+| ![Image 3 Description](figs/merged_roc.png) | ![Image 4 Description](figs/sirstaug_roc.png) |
 
-欢迎对该仓库做出贡献！如果您有新的算法实现、改进或其他功能增强的建议，请提交Pull Request。我们乐于接受新的贡献并持续改进该工具。
 
-## 许可证
+## Dataset
 
-本工具使用 [MIT许可证](LICENSE)。
+| Dataset      | Link |
+| ----------- | ----------- |
+| Sirst AUG      | [Link](https://github.com/Tianfang-Zhang/AGPCNet)       |
+| MDFA   | [Link](https://github.com/wanghuanphd/MDvsFA_cGAN)        |
+| IRSTD1K   | [Link](https://github.com/RuiZhang97/ISNet)        |
 
-请在使用本工具时遵守许可证规定。
+The above datasets have been organized and uploaded to Google Drive, and users can download and use them directly.
+
+## Installation and Usage
+
+## Install [Matlab Python API](https://ww2.mathworks.cn/help/matlab/matlab_external/install-the-matlab-engine-for-python.html)
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+```bash
+python method.py --dataset mdfa > mdfa.txt
+                            irstd > istd1k.txt
+                            sirstaug > sirstaug.txt
+                            merged > merged.txt 
+```
+
+### Plot ROC curve
+
+```bash 
+python plot_curve.py
+```
+
+## Contribution
+
+Contributions to this repository are welcome! If you have new algorithm implementations, improvements, or suggestions for other feature enhancements, please submit a pull request. We are happy to accept new contributions and continuously improve this tool.
+
+## License
+
+This tool is licensed under the [MIT License](LICENSE).
+
+Please comply with the license when using this tool.
+```
