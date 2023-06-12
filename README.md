@@ -51,6 +51,9 @@ python method.py --dataset mdfa > mdfa.txt
 python plot_curve.py
 ```
 
+## Add custom model
+Please refer to [model.md](https://github.com/o95827/ISTD-Benchmark/blob/main/model.md) for add custom model.
+
 ## Contribution
 
 Contributions to this repository are welcome! If you have new algorithm implementations, improvements, or suggestions for other feature enhancements, please submit a pull request. We are happy to accept new contributions and continuously improve this tool.
