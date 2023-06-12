@@ -3,18 +3,22 @@
 <link href="MCLC.css" rel="stylesheet" type="text/css" />
 
 <meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
+<style>
+	.slideshow-container {
+		position: relative;
+		max-width: 100%;
+		margin: auto;
+	}
+
+	.slide {
+		width: 100%;
+		height: auto;
+	}
+</style>
 </head>
 
 <body onLoad=" ">
 	<div id="container" class="STYLE37">
-
-
-		<meta name="GENERATOR" content="MSHTML 11.00.10570.1001">
-		</head>
-
-		<body onLoad=" ">
-			<div id="container" class="STYLE37">
-
 				<br>
 				<p class="styleTittle" align="center">IR-TransDet: Infrared Dim and Small Target Detection With
 					IR-Transformer</p><br>
@@ -40,7 +44,7 @@
 				<p class="STYLESection" align="center">Abstract</p>
 				<hr
 					style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
-				<div style="padding:20px 20px 20px 20px; font-size=20; color: #333; ">
+				<div style="padding:20px 20px 20px 20px; font-size: 20; color: #333; ">
 					<p style="padding:15px 15px 15px 15px; background-color:#EEE; font-size:16px; font-family:PmingLiu; line-height:23px;"
 						, align="justify">
 						The infrared small and dim target detection method is a core technology in military equipment
@@ -62,9 +66,45 @@
 					</p>
 				</div>
 				<br><br>
+				<p class="STYLESection" align="center">Quantitative Results</p>
+				<hr
+					style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+				<br>
+				<div class="slideshow-container" align="center">
+					<div class="slide">
+						<img src="Figs/MDFA.png" style="max-width: 100%; max-height: 100%;">
+					</div>
+					<div class="slide">
+						<img src="Figs/SIRST.png" style="max-width: 100%; max-height: 100%;">
+					</div>
+					<div class="slide">
+						<img src="Figs/Merged.png" style="max-width: 100%; max-height: 100%;">
+					</div>
+					<div class="slide">
+						<img src="Figs/IRSTD-1K.png" style="max-width: 100%; max-height: 100%;">
+					</div>
+				</div>
+				<script>
+					var slides = document.getElementsByClassName("slide");
+					var currentSlide = 0;
+			
+					function showSlide(index) {
+						for (var i = 0; i < slides.length; i++) {
+							slides[i].style.display = "none";
+						}
+						slides[index].style.display = "block";
+					}
+			
+					function nextSlide() {
+						currentSlide = (currentSlide + 1) % slides.length;
+						showSlide(currentSlide);
+					}
+			
+					setInterval(nextSlide, 2000); // 切换间隔时间，单位为毫秒
+				</script>
 
 
-				<p class="STYLESection" align="center">Results</p>
+				<p class="STYLESection" align="center">Qualitative Results</p>
 				<hr
 					style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
 				<br>
@@ -83,70 +123,70 @@
 				<br>
 				<style>
 					img {
-					  max-width: 100%;
-					  height: auto;
+						max-width: 100%;
+						height: auto;
 					}
-				  </style>
+				</style>
 				<table>
 					<tr>
-					  <td><img src="./Figs/IRSTD_roc.png" alt="Image 1"></td>
-					  <td><img src="./Figs/mdfa_roc.png" alt="Image 2"></td>
+						<td><img src="./Figs/IRSTD_roc.png" alt="Image 1"></td>
+						<td><img src="./Figs/mdfa_roc.png" alt="Image 2"></td>
 					</tr>
 					<tr>
-					  <td><img src="./Figs/merged_roc.png" alt="Image 3"></td>
-					  <td><img src="./Figs/sirstaug_roc.png" alt="Image 4"></td>
+						<td><img src="./Figs/merged_roc.png" alt="Image 3"></td>
+						<td><img src="./Figs/sirstaug_roc.png" alt="Image 4"></td>
 					</tr>
-				  </table>
-				  <br><br><br><br>
+				</table>
+				<br><br><br><br>
 
 
-				  <p class="STYLESection" align="center">Deploy Model With TensorRT</p>
-				  <hr
-					  style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
-				  <br>
-					<style>
-					  table {
+				<p class="STYLESection" align="center">Deploy Model With TensorRT</p>
+				<hr
+					style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
+				<br>
+				<style>
+					table {
 						width: 100%;
 						border-collapse: collapse;
 						font-family: Arial, sans-serif;
 						color: #333;
-					  }
-					  
-					  th, td {
+					}
+
+					th,
+					td {
 						padding: 10px;
 						text-align: center;
 						border-bottom: 1px solid #ddd;
-					  }
-					  
-					  th {
+					}
+
+					th {
 						background-color: #f2f2f2;
 						font-weight: bold;
-					  }
-					  
-					  tr:hover {
-						background-color: #f9f9f9;
-					  }
-					</style>
-				  <table>
-					<tr>
-					  <th>Device</th>
-					  <th>FPS</th>
-					</tr>
-					<tr>
-					  <td>RTX 3060</td>
-					  <td>415.5 [fp16]</td>
-					</tr>
-					<tr>
-					  <td>RTX 3090</td>
-					  <td>776.9 [fp16]</td>
-					</tr>
-				  </table>
-				  <p style="padding:15px 15px 15px 15px; background-color:#EEE; font-size:16px; font-family:PmingLiu; line-height:23px;"
-				  , align="justify">
-					TensorRT Version 8.5.3.1
-				  </p>
-				  <br><br><br><br>
+					}
 
+					tr:hover {
+						background-color: #f9f9f9;
+					}
+				</style>
+				<table>
+					<tr>
+						<th>Device</th>
+						<th>FPS</th>
+					</tr>
+					<tr>
+						<td>RTX 3060</td>
+						<td>415.5 [fp16]</td>
+					</tr>
+					<tr>
+						<td>RTX 3090</td>
+						<td>776.9 [fp16]</td>
+					</tr>
+				</table>
+				<p style="padding:15px 15px 15px 15px; background-color:#EEE; font-size:16px; font-family:PmingLiu; line-height:23px;"
+					, align="justify">
+					TensorRT Version 8.5.3.1
+				</p>
+				<br><br><br><br>
 				</pre>
 			</div>
 		</body>
