@@ -137,38 +137,15 @@
 		<hr
 			style="BORDER-LEFT-STYLE: none; BORDER-TOP: gray 3px groove; HEIGHT: 0px; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none">
 		<br>
-		<div class="slideshow-container" align="center">
-			<div class="slide">
-				<img src="Figs/MDFA.png" style="max-width: 100%; max-height: 100%;">
-			</div>
-			<div class="slide">
-				<img src="Figs/SIRST.png" style="max-width: 100%; max-height: 100%;">
-			</div>
-			<div class="slide">
-				<img src="Figs/Merged.png" style="max-width: 100%; max-height: 100%;">
-			</div>
-			<div class="slide">
-				<img src="Figs/IRSTD-1K.png" style="max-width: 100%; max-height: 100%;">
-			</div>
-		</div>
-		<script>
-			var slides = document.getElementsByClassName("slide");
-			var currentSlide = 0;
+		<table width="100%" border="0">
+		<tbody>
+			<tr>
+				<th scope="col"><img src="./Figs/dataset.png" width="100%"></th>
+			</tr>
+		</tbody>
+		</table>
+		<br><br><br><br>
 
-			function showSlide(index) {
-				for (var i = 0; i < slides.length; i++) {
-					slides[i].style.display = "none";
-				}
-				slides[index].style.display = "block";
-			}
-
-			function nextSlide() {
-				currentSlide = (currentSlide + 1) % slides.length;
-				showSlide(currentSlide);
-			}
-
-			setInterval(nextSlide, 2000); // 切换间隔时间，单位为毫秒
-		</script>
 
 
 		<p class="STYLESection" align="center">Qualitative Results</p>
