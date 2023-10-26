@@ -3,6 +3,12 @@
 ![](https://img.shields.io/badge/Matlab-brightgreen)
 ![](https://img.shields.io/badge/Infrared_Small_Dim_Target_Detection-yellow)
 
+## Paper
+
+- [IR-TransDet: Infrared Dim and Small Target Detection With IR-Transformer](https://ieeexplore.ieee.org/document/10295542)
+- [Infrared dim and small target detection based on U-Transformer](https://www.sciencedirect.com/science/article/abs/pii/S1047320322002048?via%3Dihub)
+
+
 [简体中文](./README-zh.md)  &emsp;  [Project](https://linaom1214.github.io/ISTD-Benchmark/)
 
 This repository is a benchmark tool for weak small target detection, aiming to provide a platform that integrates typical weak small target detection algorithms and unified evaluation metrics. This tool can help researchers and developers evaluate the performance of different algorithms on weak small target detection tasks.
@@ -61,9 +67,24 @@ Please refer to [model.md](https://github.com/o95827/ISTD-Benchmark/blob/main/mo
 
 Contributions to this repository are welcome! If you have new algorithm implementations, improvements, or suggestions for other feature enhancements, please submit a pull request. We are happy to accept new contributions and continuously improve this tool.
 
-## License
+# Cite
+```text
+@article{lin2022infrared,
+  title={Infrared dim and small target detection based on U-Transformer},
+  author={Lin, Jian and Zhang, Kai and Yang, Xi and Cheng, Xiangzheng and Li, Chenhui},
+  journal={Journal of Visual Communication and Image Representation},
+  pages={103684},
+  year={2022},
+  publisher={Elsevier}
+}
 
-This tool is licensed under the [MIT License](LICENSE).
-
-Please comply with the license when using this tool.
+@ARTICLE{10295542,
+  author={Lin, Jian and Li, Shaoyi and Zhang, Liang and Yang, Xi and Yan, Binbin and Meng, Zhongjie},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={IR-TransDet: Infrared Dim and Small Target Detection With IR-Transformer}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TGRS.2023.3327317}}
 ```
