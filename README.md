@@ -83,8 +83,8 @@ Contributions to this repository are welcome! If you have new algorithm implemen
   journal={IEEE Transactions on Geoscience and Remote Sensing}, 
   title={IR-TransDet: Infrared Dim and Small Target Detection With IR-Transformer}, 
   year={2023},
-  volume={},
+  volume={61},
   number={},
-  pages={1-1},
+  pages={1-13},
   doi={10.1109/TGRS.2023.3327317}}
 ```
